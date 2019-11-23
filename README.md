@@ -14,5 +14,5 @@ SpellChecking
 [docs/Spellcheck2019.pdf](docs/Spellcheck2019.pdf)
 
 # Дедлайн:
-## 
+## 08.12.19, 23:59
 Коммиты после этого времени будут игнорироваться.
