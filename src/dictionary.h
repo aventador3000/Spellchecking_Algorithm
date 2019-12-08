@@ -18,10 +18,18 @@ class hash_function
 public:
 
     unsigned int operator()( const string& s )  const {
-        
-        
-        // Complete definition
-        
+        unsigned int key= 37;
+        unsigned long hash=0;
+        unsigned long mem=1;
+
+        for(int i=0;i<s.size();++i)
+        {
+            hash+=(s[i]+ 'a'+1)*mem;
+            mem*=key;
+
+        }
+        return (hash&0xFFFFF);
+
     }
 };
 
@@ -37,9 +45,9 @@ public:
 
 class Dictionary: public HashSet<string, hash_function, equality> {
 
-    // Complete definition
 public:
 	Dictionary(string filename);
+
 
 };
 #endif // _DICTIONARY_H_
